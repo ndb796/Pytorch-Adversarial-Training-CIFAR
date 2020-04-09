@@ -105,7 +105,6 @@ def test(epoch):
     net.eval()
     benign_loss = 0
     adv_loss = 0
-    correct = 0
     benign_correct = 0
     adv_correct = 0
     total = 0
@@ -119,7 +118,6 @@ def test(epoch):
             benign_loss += loss.item()
 
             _, predicted = outputs.max(1)
-            correct += predicted.eq(targets).sum().item()
             benign_correct += predicted.eq(targets).sum().item()
 
             if batch_idx % 10 == 0:
@@ -133,7 +131,6 @@ def test(epoch):
             adv_loss += loss.item()
 
             _, predicted = adv_outputs.max(1)
-            correct += predicted.eq(targets).sum().item()
             adv_correct += predicted.eq(targets).sum().item()
 
             if batch_idx % 10 == 0:
