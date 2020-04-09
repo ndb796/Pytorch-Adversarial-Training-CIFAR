@@ -43,9 +43,10 @@ python3 pgd_adversarial_training.py
 python3 interpolated_adversarial_training.py
 </pre>
 
-### Test Results
+### How to Test
 
 * The attack method is PGD attack (Epsilon size is 0.0314 in L-infinity bound).
+* All pre-trained models are provided in this repository :)
 <pre>
 python3 test.py
 </pre>
