@@ -21,7 +21,7 @@
 
 #### 1. Basic Training
 
-* The basic training method adpots ResNet-18 architecture proposed by Kaiming He in [CVPR 2016](https://arxiv.org/pdf/1512.03385.pdf).
+* The basic training method adopts ResNet-18 architecture proposed by Kaiming He in [CVPR 2016](https://arxiv.org/pdf/1512.03385.pdf).
 * This architecture is smaller than Madry Laboratory, but performances are similar.
 <pre>
 python3 basic_training.py
