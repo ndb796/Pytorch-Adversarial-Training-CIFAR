@@ -86,7 +86,10 @@ optimizer = optim.SGD(net.parameters(), lr=learning_rate, momentum=0.9, weight_d
 def train(epoch):
     print('\n[ Train epoch: %d ]' % epoch)
     net.train()
-    train_loss = 0
+    benign_loss = 0
+    adv_loss = 0
+    benign_correct = 0
+    adv_correct = 0
     total = 0
     for batch_idx, (inputs, targets) in enumerate(train_loader):
         inputs, targets = inputs.to(device), targets.to(device)
