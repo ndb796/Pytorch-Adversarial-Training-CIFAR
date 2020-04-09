@@ -1,12 +1,12 @@
 ## Pytorch Adversarial Training on CIFAR-10
 
 * This repository provides simple PyTorch implementations for adversarial training methods on CIFAR-10.
-* This repository shows fine reproduced accuracies which are similar to the accuracies in the original papers.
+* This repository shows nice reproduced accuracies which are similar to the accuracies in the original papers.
 * If you have questions about this repository, please send an e-mail to me (dongbinna@postech.ac.kr) or make an issue.
 
 ### Experiment Settings
 
-* The basic experiment setting used in this repository are followed the setting used in [Madry Laboratory](https://github.com/MadryLab/cifar10_challenge).
+* The basic experiment setting used in this repository follows the setting used in [Madry Laboratory](https://github.com/MadryLab/cifar10_challenge).
 * Dataset: CIFAR-10 (10 classes)
 * Attack method: PGD attack (Epsilon size is 0.0314 in L-infinity bound)
 * Training batch size: 128
