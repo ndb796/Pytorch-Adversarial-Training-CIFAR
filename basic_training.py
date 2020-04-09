@@ -152,7 +152,7 @@ def test(epoch):
     if not os.path.isdir('checkpoint'):
         os.mkdir('checkpoint')
     torch.save(state, './checkpoint/' + file_name)
-    print('Model Saved')
+    print('Model Saved!')
 
 def adjust_learning_rate(optimizer, epoch):
     lr = learning_rate
