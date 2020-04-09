@@ -10,7 +10,6 @@ import torchvision.transforms as transforms
 import os
 import argparse
 
-from tqdm import tqdm
 from models import *
 
 learning_rate = 0.1
@@ -77,8 +76,7 @@ def train(epoch):
     train_loss = 0
     correct = 0
     total = 0
-    iterator = tqdm(train_loader, ncols=0, leave=False)
-    for batch_idx, (inputs, targets) in enumerate(iterator):
+    for batch_idx, (inputs, targets) in enumerate(train_loader):
         inputs, targets = inputs.to(device), targets.to(device)
         optimizer.zero_grad()
 
@@ -94,8 +92,8 @@ def train(epoch):
         correct += predicted.eq(targets).sum().item()
         
         if batch_idx % 10 == 0:
-            print('\nCurrent benign accuracy: ', str(predicted.eq(targets).sum().item() / targets.size(0)))
-            print('Current benign loss:', loss.item())
+            print('\nCurrent benign train accuracy: ', str(predicted.eq(targets).sum().item() / targets.size(0)))
+            print('Current benign train loss:', loss.item())
 
     print('\nTotal benign train accuarcy:', 100. * correct / total)
     print('Total benign train loss:', train_loss)
@@ -110,8 +108,7 @@ def test(epoch):
     adv_correct = 0
     total = 0
     with torch.no_grad():
-        iterator = tqdm(test_loader, ncols=0, leave=False)
-        for batch_idx, (inputs, targets) in enumerate(iterator):
+        for batch_idx, (inputs, targets) in enumerate(test_loaderd):
             inputs, targets = inputs.to(device), targets.to(device)
             total += targets.size(0)
 
@@ -139,7 +136,7 @@ def test(epoch):
                 adv_correct += predicted.eq(targets).sum().item()
 
                 if batch_idx % 10 == 0:
-                    print('\nCurrent adversarial test accuracy: ', str(predicted.eq(targets).sum().item() / targets.size(0)))
+                    print('Current adversarial test accuracy: ', str(predicted.eq(targets).sum().item() / targets.size(0)))
                     print('Current adversarial test loss:', loss.item())
 
     print('\nTotal benign test accuarcy:', 100. * benign_correct / total)
