@@ -1,9 +1,10 @@
 ### Adversarial Training
 
-* This repository are simple PyTorch implementations for adversarial training methods on CIFAR-10.
+* This repository provides simple PyTorch implementations for adversarial training methods on CIFAR-10.
 * This repository shows fine reproduced accuracies which are similar to the accuracies in the original papers.
-* The adversarial attack methods used in this repository are the same methods used in Madry Laboratory.
-  * PGD attack (Epsilon size is 0.0314 in L-infinity bound)
+* The basic experiment setting used in this repository are the same methods used in [Madry Laboratory].
+ * Dataset: CIFAR-10 (10 classes)
+ * Attack method: PGD attack (Epsilon size is 0.0314 in L-infinity bound)
 * If you have a question about these source codes, please send an e-mail to me (dongbinna@postech.ac.kr).
 
 ### Basic Training
