@@ -47,7 +47,7 @@ class LinfPGDAttack(object):
             x.requires_grad_()
             with torch.enable_grad():
                 logits = self.model(x)
-                loss = F.cross_entropy(logits, y, size_average=False)
+                loss = F.cross_entropy(logits, y)
             grad = torch.autograd.grad(loss, [x])[0]
             x = x.detach() + alpha * torch.sign(grad.detach())
             x = torch.min(torch.max(x, x_natural - epsilon), x_natural + epsilon)
