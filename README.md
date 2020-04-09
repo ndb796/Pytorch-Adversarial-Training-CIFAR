@@ -1,4 +1,4 @@
-## Pytorch Adversarial Training Implementations
+## Pytorch Adversarial Training on CIFAR-10
 
 * This repository provides simple PyTorch implementations for adversarial training methods on CIFAR-10.
 * This repository shows fine reproduced accuracies which are similar to the accuracies in the original papers.
@@ -24,8 +24,8 @@
 
 ### PGD Adversarial Training
 
-* This defense method was proposed by Aleksander Madry in ICLR 2018
+* This defense method was proposed by Aleksander Madry in ICLR 2018.
 
 ### Interpolated Adversarial Training (IAT)
 
-* This defense method was proposed by Alex Lamb in AISec 2019
+* This defense method was proposed by Alex Lamb in AISec 2019.
