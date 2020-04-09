@@ -9,6 +9,7 @@ import torchvision.transforms as transforms
 
 import os
 import argparse
+import numpy as np
 
 from models import *
 
