@@ -22,6 +22,10 @@
 * The basic training method adpots ResNet-18 architecture proposed by Kaiming He in [CVPR 2016](https://arxiv.org/pdf/1512.03385.pdf).
 * This architecture is smaller than Madry Laboratory, but performances are similar.
 
+<pre>
+python3 basic_training.py
+</pre>
+
 ### PGD Adversarial Training
 
 * This defense method was proposed by Aleksander Madry in [ICLR 2018](https://arxiv.org/pdf/1706.06083.pdf).
