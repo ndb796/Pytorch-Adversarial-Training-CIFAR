@@ -1,7 +1,7 @@
 ## Pytorch Adversarial Training on CIFAR-10
 
 * This repository provides simple PyTorch implementations for adversarial training methods on CIFAR-10.
-* This repository shows reproduced accuracies which are similar to the accuracies in the original papers.
+* This repository shows fine accuracies which are similar to the accuracies in the original papers.
 * If you have questions about this repository, please send an e-mail to me (dongbinna@postech.ac.kr) or make an issue.
 
 ### Experiment Settings
