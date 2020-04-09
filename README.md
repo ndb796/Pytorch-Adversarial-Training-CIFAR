@@ -21,7 +21,6 @@
 
 * The basic training method adpots ResNet-18 architecture proposed by Kaiming He in [CVPR 2016](https://arxiv.org/pdf/1512.03385.pdf).
 * This architecture is smaller than Madry Laboratory, but performances are similar.
-
 <pre>
 python3 basic_training.py
 </pre>
@@ -29,7 +28,15 @@ python3 basic_training.py
 ### PGD Adversarial Training
 
 * This defense method was proposed by Aleksander Madry in [ICLR 2018](https://arxiv.org/pdf/1706.06083.pdf).
+* This architecture is smaller than Madry Laboratory, but performances are similar.
+<pre>
+python3 pgd_adversarial_training.py
+</pre>
 
 ### Interpolated Adversarial Training (IAT)
 
 * This defense method was proposed by Alex Lamb in [AISec 2019](https://arxiv.org/pdf/1906.06784.pdf).
+* This architecture is smaller than Madry Laboratory, but performances are similar.
+<pre>
+python3 interpolated_adversarial_training.py
+</pre>
