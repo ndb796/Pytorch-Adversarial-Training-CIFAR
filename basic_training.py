@@ -143,8 +143,8 @@ def test(epoch):
 
     print('\nTotal benign test accuarcy:', 100. * benign_correct / total)
     print('Total adversarial test Accuarcy:', 100. * adv_correct / total)
-    print('Total benign test Loss:', benign_loss)
-    print('Total adversarial test Loss:', adv_loss)
+    print('Total benign test loss:', benign_loss)
+    print('Total adversarial test loss:', adv_loss)
 
     state = {
         'net': net.state_dict()
