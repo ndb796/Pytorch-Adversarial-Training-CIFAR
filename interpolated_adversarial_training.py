@@ -103,7 +103,10 @@ def train(epoch):
 
         _, predicted = benign_outputs.max(1)
         benign_correct += (benign_lam * predicted.eq(benign_targets_a).sum().float() + (1 - benign_lam) * predicted.eq(benign_targets_b).sum().float())
-        print('\nBenign Accuracy: ', str(predicted.eq(targets).sum().item() / targets.size(0)))
+        if batch_idx % 10 == 0:
+                print('\nCurrent batch:', str(batch_idx))
+                print('Current benign train accuracy:', str(predicted.eq(targets).sum().item() / targets.size(0)))
+                print('Current benign train loss:', loss1.item())
 
         adv = adversary.perturb(inputs, targets)
         adv_inputs, adv_targets_a, adv_targets_b, adv_lam = mixup_data(adv, targets)
@@ -113,7 +116,9 @@ def train(epoch):
 
         _, predicted = adv_outputs.max(1)
         adv_correct += (adv_lam * predicted.eq(adv_targets_a).sum().float() + (1 - adv_lam) * predicted.eq(adv_targets_b).sum().float())
-        print('Adv Accuracy: ', str(predicted.eq(targets).sum().item() / targets.size(0)))
+        if batch_idx % 10 == 0:
+                print('Current adversarial train accuracy:', str(predicted.eq(targets).sum().item() / targets.size(0)))
+                print('Current adversarial train loss:', loss2.item())
 
         loss = (loss1 + loss2) / 2
         loss.backward()
