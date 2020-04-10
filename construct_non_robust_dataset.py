@@ -9,6 +9,8 @@ import matplotlib.image as image
 import numpy as np
 import os
 
+from models import *
+
 epsilon = 0.0314
 k = 7
 alpha = 0.00784
