@@ -50,3 +50,12 @@ python3 interpolated_adversarial_training.py
 <pre>
 python3 test.py
 </pre>
+
+### Dataset Construction
+
+* The dataset construction method was proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
+* Normal dataset can be splited into robust dataset and non-robust dataset.
+* How to constructing a non-robust dataset
+<pre>
+python3 construct_non_robust_dataset.py
+</pre>
