@@ -30,7 +30,7 @@ python3 basic_training.py
 |------|---|---|
 |Benign accuarcy|95.28%|95.2%|
 |Robust accuracy (L-infinity PGD)|1.02%|3.50%|
-* Pre-trained model download
+* [Pre-trained model download: Basic Training](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EcpGMF03mR9Ko1MM-kMSmloB4ceabuYCvnHaGZPgLNMzrA?e=dMBBRA)
 
 #### 2. PGD Adversarial Training
 
@@ -42,7 +42,7 @@ python3 pgd_adversarial_training.py
 |------|---|---|
 |Benign accuarcy|83.53%|87.30%|
 |Robust accuracy (L-infinity PGD)|46.07%|50.00%|
-* Pre-trained model download
+* [Pre-trained model download: PGD Adversarial Training](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/Efy7BpBGApRHi97u00A34t8BuNp_64Yswk5s_MPv2z15yA?e=RcL2iC)
 
 #### 3. Interpolated Adversarial Training (IAT)
 
@@ -54,6 +54,7 @@ python3 interpolated_adversarial_training.py
 |------|---|---| 
 |Benign accuarcy|91.86%|93.55%|
 |Robust accuracy (L-infinity PGD)|44.76%|50.12%|
+* [Pre-trained model download: Interpolated Adversarial Training](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EWP0H_Q21vZOvb6njchzHZkBshcdTxJXse17kNBk5H-qnA?e=ttYKts)
 
 #### 4. Basic Training with Robust Dataset
 
