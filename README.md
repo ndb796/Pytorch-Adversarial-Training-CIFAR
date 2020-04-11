@@ -50,16 +50,17 @@ python3 pgd_adversarial_training.py
 <pre>
 python3 interpolated_adversarial_training.py
 </pre>
-||This repository|Original paper (wide)|
-|------|---|---| 
-|Benign accuarcy|91.86%|93.55%|
-|Robust accuracy (L-infinity PGD)|44.76%|50.12%|
+||This repository|Original paper (pre-act)|
+|------|---|---|
+|Benign accuarcy|91.86%|89.88%|
+|Robust accuracy (L-infinity PGD)|44.76%|44.57%|
 * [Pre-trained model download: Interpolated Adversarial Training](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EWP0H_Q21vZOvb6njchzHZkBshcdTxJXse17kNBk5H-qnA?e=ttYKts)
 
 #### 4. Basic Training with Robust Dataset
 
 * Normal dataset can be splited into robust dataset and non-robust dataset.
 * Construction method for robust dataset proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
+* [Dataset download: Robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/ET9LWRoUc9ZCjU0-szWt55ABQepaeB64I8ZAruOlwNDQHg?e=FOmeb5)
 <pre>
 python3 basic_training_with_robust_dataset.py
 </pre>
@@ -68,6 +69,7 @@ python3 basic_training_with_robust_dataset.py
 
 * Normal dataset can be splited into robust dataset and non-robust dataset.
 * Construction method for non-robust dataset proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
+* [Dataset download: Non-robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EZ9_ujc-biRFvVsjKU6QSk0BsiPma8kBpZDwSM20ryYqfg?e=bhpMYg)
 <pre>
 python3 basic_training_with_non_robust_dataset.py
 </pre>
