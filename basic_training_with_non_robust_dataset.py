@@ -102,34 +102,33 @@ def test(epoch):
     benign_correct = 0
     adv_correct = 0
     total = 0
-    with torch.no_grad():
-        for batch_idx, (inputs, targets) in enumerate(test_loader):
-            inputs, targets = inputs.to(device), targets.to(device)
-            total += targets.size(0)
+    for batch_idx, (inputs, targets) in enumerate(test_loader):
+        inputs, targets = inputs.to(device), targets.to(device)
+        total += targets.size(0)
 
-            outputs = net(inputs)
-            loss = criterion(outputs, targets)
-            benign_loss += loss.item()
+        outputs = net(inputs)
+        loss = criterion(outputs, targets)
+        benign_loss += loss.item()
 
-            _, predicted = outputs.max(1)
-            benign_correct += predicted.eq(targets).sum().item()
+        _, predicted = outputs.max(1)
+        benign_correct += predicted.eq(targets).sum().item()
 
-            if batch_idx % 10 == 0:
-                print('\nCurrent batch:', str(batch_idx))
-                print('Current benign test accuracy:', str(predicted.eq(targets).sum().item() / targets.size(0)))
-                print('Current benign test loss:', loss.item())
+        if batch_idx % 10 == 0:
+            print('\nCurrent batch:', str(batch_idx))
+            print('Current benign test accuracy:', str(predicted.eq(targets).sum().item() / targets.size(0)))
+            print('Current benign test loss:', loss.item())
 
-            adv = adversary.perturb(inputs, targets)
-            adv_outputs = net(adv)
-            loss = criterion(adv_outputs, targets)
-            adv_loss += loss.item()
+        adv = adversary.perturb(inputs, targets)
+        adv_outputs = net(adv)
+        loss = criterion(adv_outputs, targets)
+        adv_loss += loss.item()
 
-            _, predicted = adv_outputs.max(1)
-            adv_correct += predicted.eq(targets).sum().item()
+        _, predicted = adv_outputs.max(1)
+        adv_correct += predicted.eq(targets).sum().item()
 
-            if batch_idx % 10 == 0:
-                print('Current adversarial test accuracy:', str(predicted.eq(targets).sum().item() / targets.size(0)))
-                print('Current adversarial test loss:', loss.item())
+        if batch_idx % 10 == 0:
+            print('Current adversarial test accuracy:', str(predicted.eq(targets).sum().item() / targets.size(0)))
+            print('Current adversarial test loss:', loss.item())
 
     print('\nTotal benign test accuarcy:', 100. * benign_correct / total)
     print('Total adversarial test Accuarcy:', 100. * adv_correct / total)
