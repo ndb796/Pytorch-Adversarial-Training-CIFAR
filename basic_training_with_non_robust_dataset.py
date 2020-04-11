@@ -14,9 +14,6 @@ from models import *
 from advertorch.attacks import L2PGDAttack
 
 learning_rate = 0.1
-epsilon = 0.0314
-k = 7
-alpha = 0.00784
 file_name = 'basic_training_with_non_robust_dataset'
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
