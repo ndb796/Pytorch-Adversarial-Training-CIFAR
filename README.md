@@ -52,7 +52,7 @@ python3 pgd_adversarial_training.py
 <pre>
 python3 interpolated_adversarial_training.py
 </pre>
-||This repository|Original paper (pre-act)|
+||This repository|Original paper|
 |------|---|---|
 |Benign accuarcy|91.86%|89.88%|
 |Robust accuracy (L-infinity PGD)|44.76%|44.57%|
@@ -67,6 +67,10 @@ python3 interpolated_adversarial_training.py
 <pre>
 python3 basic_training_with_robust_dataset.py
 </pre>
+||This repository|Original paper (wide)|
+|------|---|---|
+|Benign accuarcy|78.69%|84.10%|
+|Robust accuracy (L-infinity PGD)|37.96%|48.27%|
 
 #### 5. Basic Training with Non-robust Dataset
 
@@ -76,6 +80,10 @@ python3 basic_training_with_robust_dataset.py
 <pre>
 python3 basic_training_with_non_robust_dataset.py
 </pre>
+||This repository|Original paper (wide)|
+|------|---|---|
+|Benign accuarcy|82.00%|87.68%|
+|Robust accuracy (L-infinity PGD)|0.10%|0.82%|
 
 ### How to Test
 
