@@ -71,6 +71,7 @@ python3 basic_training_with_robust_dataset.py
 |------|---|---|
 |Benign accuarcy|78.69%|84.10%|
 |Robust accuracy (L-infinity PGD)|37.96%|48.27%|
+* [Trained model download: Basic Training with Robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EUzfqsw2k8VGkE92kdEWEtoB2AhznrfmVv-XPpo8NCn8QA?e=xKABMd)
 
 #### 5. Basic Training with Non-robust Dataset
 
@@ -84,6 +85,7 @@ python3 basic_training_with_non_robust_dataset.py
 |------|---|---|
 |Benign accuarcy|82.00%|87.68%|
 |Robust accuracy (L-infinity PGD)|0.10%|0.82%|
+* [Trained model download: Basic Training with Non-robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/ESxDKKWp_f5GtO2GBCCKJBsBDJSXmgfGaQDKp3jnLKg_nw?e=0eoRTq)
 
 ### How to Test
 
