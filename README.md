@@ -54,7 +54,7 @@ python3 interpolated_adversarial_training.py
 </pre>
 ||This repository|Original paper|
 |------|---|---|
-|Benign accuarcy|91.86%|89.88%|
+|Benign accuracy|91.86%|89.88%|
 |Robust accuracy (L-infinity PGD)|44.76%|44.57%|
 * Training time: 15 hours 18 minutes using 1 Titan XP
 * [Trained model download: Interpolated Adversarial Training](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EWP0H_Q21vZOvb6njchzHZkBshcdTxJXse17kNBk5H-qnA?e=ttYKts)
