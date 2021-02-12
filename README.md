@@ -8,7 +8,9 @@
 
 * The basic experiment setting used in this repository follows the setting used in [Madry Laboratory](https://github.com/MadryLab/cifar10_challenge).
 * Dataset: CIFAR-10 (10 classes)
-* Attack method: PGD attack (Epsilon size is 0.0314 in L-infinity bound)
+* Attack method: PGD attack
+  1) Epsilon size: 0.0314 for L-infinity bound
+  2) Epsilon size: 0.25 or 0.5 for L2 bound
 * Training batch size: 128
 * Weight decay: 0.0002
 * Momentum: 0.9
@@ -62,6 +64,7 @@ python3 interpolated_adversarial_training.py
 #### 4. Basic Training with Robust Dataset
 
 * Normal dataset can be splited into robust dataset and non-robust dataset.
+* This robust dataset is conducted from a L2 adversarially trained model (epsilon = 0.5).
 * The construction method for robust dataset proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
 * [Dataset download: Robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/ET9LWRoUc9ZCjU0-szWt55ABQepaeB64I8ZAruOlwNDQHg?e=FOmeb5)
 <pre>
@@ -70,12 +73,13 @@ python3 basic_training_with_robust_dataset.py
 ||This repository|Original paper (wide)|
 |------|---|---|
 |Benign accuracy|78.69%|84.10%|
-|Robust accuracy (L-infinity PGD)|37.96%|48.27%|
+|Robust accuracy (L2 PGD 0.25)|37.96%|48.27%|
 * [Trained model download: Basic Training with Robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EUzfqsw2k8VGkE92kdEWEtoB2AhznrfmVv-XPpo8NCn8QA?e=xKABMd)
 
 #### 5. Basic Training with Non-robust Dataset
 
 * The normal dataset can be split into robust dataset and non-robust dataset.
+* This non-robust dataset is conducted from a L2 adversarially trained model (epsilon = 0.5).
 * The construction method for non-robust dataset proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
 * [Dataset download: Non-robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EZ9_ujc-biRFvVsjKU6QSk0BsiPma8kBpZDwSM20ryYqfg?e=bhpMYg)
 <pre>
@@ -84,7 +88,7 @@ python3 basic_training_with_non_robust_dataset.py
 ||This repository|Original paper (wide)|
 |------|---|---|
 |Benign accuracy|82.00%|87.68%|
-|Robust accuracy (L-infinity PGD)|0.10%|0.82%|
+|Robust accuracy (L2 PGD 0.25)|0.10%|0.82%|
 * [Trained model download: Basic Training with Non-robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/ESxDKKWp_f5GtO2GBCCKJBsBDJSXmgfGaQDKp3jnLKg_nw?e=0eoRTq)
 
 ### How to Test
