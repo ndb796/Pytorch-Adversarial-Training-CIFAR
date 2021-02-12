@@ -63,9 +63,9 @@ python3 interpolated_adversarial_training.py
 
 #### 4. Basic Training with Robust Dataset
 
-* Normal dataset can be splited into robust dataset and non-robust dataset.
-* This robust dataset is conducted from a L2 adversarially trained model (epsilon = 0.5).
-* The construction method for robust dataset proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
+* Normal dataset can be split into a robust dataset and non-robust dataset.
+* This robust dataset is conducted from an L2 adversarially trained model (epsilon = 0.5).
+* The construction method for a robust dataset is proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
 * [Dataset download: Robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/ET9LWRoUc9ZCjU0-szWt55ABQepaeB64I8ZAruOlwNDQHg?e=FOmeb5)
 <pre>
 python3 basic_training_with_robust_dataset.py
@@ -78,9 +78,9 @@ python3 basic_training_with_robust_dataset.py
 
 #### 5. Basic Training with Non-robust Dataset
 
-* The normal dataset can be split into robust dataset and non-robust dataset.
-* This non-robust dataset is conducted from a L2 adversarially trained model (epsilon = 0.5).
-* The construction method for non-robust dataset proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
+* The normal dataset can be split into a robust dataset and non-robust dataset.
+* This non-robust dataset is conducted from an L2 adversarially trained model (epsilon = 0.5).
+* The construction method for a non-robust dataset is proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
 * [Dataset download: Non-robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EZ9_ujc-biRFvVsjKU6QSk0BsiPma8kBpZDwSM20ryYqfg?e=bhpMYg)
 <pre>
 python3 basic_training_with_non_robust_dataset.py
@@ -93,7 +93,7 @@ python3 basic_training_with_non_robust_dataset.py
 
 ### How to Test
 
-* The attack method is PGD attack (Epsilon size is 0.0314 in L-infinity bound).
+* The attack method is PGD attack.
 * All pre-trained models are provided in this repository :)
 <pre>
 python3 test.py
