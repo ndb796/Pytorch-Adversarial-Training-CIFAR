@@ -9,8 +9,8 @@
 * The basic experiment setting used in this repository follows the setting used in [Madry Laboratory](https://github.com/MadryLab/cifar10_challenge).
 * Dataset: CIFAR-10 (10 classes)
 * Attack method: PGD attack
-  1) Epsilon size: 0.0314 for L-infinity bound
-  2) Epsilon size: 0.25 (for attack) or 0.5 (for training) for L2 bound
+  1) Epsilon size: 0.0314 for <b>L-infinity bound</b>
+  2) Epsilon size: 0.25 (for attack) or 0.5 (for training) for <b>L2 bound</b>
 * Training batch size: 128
 * Weight decay: 0.0002
 * Momentum: 0.9
@@ -25,7 +25,7 @@
 #### 1. Basic Training
 
 * The basic training method adopts ResNet-18 architecture proposed by Kaiming He in [CVPR 2016](https://arxiv.org/pdf/1512.03385.pdf).
-    * But, the architecture in this repository uses input size to 32 X 32 for CIFAR-10 (original ResNet-18 is for ImageNet).
+    * But, the architecture in this repository uses 32 X 32 inputs for CIFAR-10 (original ResNet-18 is for ImageNet).
 <pre>
 python3 basic_training.py
 </pre>
@@ -64,7 +64,7 @@ python3 interpolated_adversarial_training.py
 
 #### 4. Basic Training with Robust Dataset
 
-* Normal dataset can be split into a robust dataset and non-robust dataset.
+* A normal dataset can be split into a robust dataset and a non-robust dataset.
 * This robust dataset is conducted from an L2 adversarially trained model (epsilon = 0.5).
 * The construction method for a robust dataset is proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
 * [Dataset download: Robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/ET9LWRoUc9ZCjU0-szWt55ABQepaeB64I8ZAruOlwNDQHg?e=FOmeb5)
@@ -79,7 +79,7 @@ python3 basic_training_with_robust_dataset.py
 
 #### 5. Basic Training with Non-robust Dataset
 
-* The normal dataset can be split into a robust dataset and non-robust dataset.
+* The normal dataset can be split into a robust dataset and a non-robust dataset.
 * This non-robust dataset is conducted from an L2 adversarially trained model (epsilon = 0.5).
 * The construction method for a non-robust dataset is proposed by Andrew Ilyas in [NIPS 2019](https://arxiv.org/pdf/1905.02175.pdf).
 * [Dataset download: Non-robust Dataset](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EZ9_ujc-biRFvVsjKU6QSk0BsiPma8kBpZDwSM20ryYqfg?e=bhpMYg)
@@ -94,7 +94,7 @@ python3 basic_training_with_non_robust_dataset.py
 
 ### How to Test
 
-* The attack method is PGD attack.
+* The attack method is the PGD attack.
 * All pre-trained models are provided in this repository :)
 <pre>
 python3 test.py
