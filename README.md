@@ -1,7 +1,7 @@
 ## Pytorch Adversarial Training on CIFAR-10
 
 * This repository provides simple PyTorch implementations for adversarial training methods on CIFAR-10.
-* This repository shows fine accuracies that are similar to the accuracies in the original papers.
+* This repository shows accuracies that are similar to the accuracies in the original papers.
 * If you have questions about this repository, please send an e-mail to me (dongbinna@postech.ac.kr) or make an issue.
 
 ### Experiment Settings
@@ -10,7 +10,7 @@
 * Dataset: CIFAR-10 (10 classes)
 * Attack method: PGD attack
   1) Epsilon size: 0.0314 for L-infinity bound
-  2) Epsilon size: 0.25 or 0.5 for L2 bound
+  2) Epsilon size: 0.25 (for attack) or 0.5 (for training) for L2 bound
 * Training batch size: 128
 * Weight decay: 0.0002
 * Momentum: 0.9
@@ -25,13 +25,14 @@
 #### 1. Basic Training
 
 * The basic training method adopts ResNet-18 architecture proposed by Kaiming He in [CVPR 2016](https://arxiv.org/pdf/1512.03385.pdf).
+    * But, the architecture in this repository uses input size to 32 X 32 for CIFAR-10 (original ResNet-18 is for ImageNet).
 <pre>
 python3 basic_training.py
 </pre>
-||This repository|Original paper (wide)|
-|------|---|---|
-|Benign accuracy|95.28%|95.2%|
-|Robust accuracy (L-infinity PGD)|1.02%|3.50%|
+||This repository|
+|------|---|
+|Benign accuracy|95.28%|
+|Robust accuracy (L-infinity PGD)|1.02%|
 * Training time: 2 hours 24 minutes using 1 Titan XP
 * [Trained model download: Basic Training](https://postechackr-my.sharepoint.com/:u:/g/personal/dongbinna_postech_ac_kr/EcpGMF03mR9Ko1MM-kMSmloB4ceabuYCvnHaGZPgLNMzrA?e=dMBBRA)
 
